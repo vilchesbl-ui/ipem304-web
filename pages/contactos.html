@@ -9,23 +9,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <header>
+    <header class="text-center py-3">
         <img src="../img/logo1.jpeg" class="logo">
-
         <h1>IPEM N° 304 - JUAN CARLOS FERRERO</h1>
-
-        <nav>
-            <a href="../index.html">INICIO</a>
-            <a href="quienes_somos.html"> ¿QUIENES SOMOS? </a>
-            <a href="especialidad.html">ESPECIALIDAD </a>
-            <a href="proyectos.html">PROYECTOS</a>
-            <a href="contactos.html">CONTACTOS</a>
-        </nav>
     </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand d-lg-none" href="../index.html">IPEM 304</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarIPEM">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarIPEM">
+                <ul class="navbar-nav gap-lg-4 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quienes_somos.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="especialidad.html">Especialidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
 
     <main>
 
@@ -68,51 +92,20 @@
             </p>
         </section>
 
-        <!----------UBICACIÓN CON BOOTSTRAP------->
-        <section class="container my-4">
-            <div class="mx-auto col-md-8">
-                <div class="ratio ratio-16x9">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.804540672849!2d-63.86656432573512!3d-32.03599842647556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd17bb581942e1%3A0xc6947169f6c477b7!2sIPEM%20304%20Juan%20Carlos%20Ferrero!5e1!3m2!1ses!2sar!4v1763871779212!5m2!1ses!2sar"
-                        width="600" height="450" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+        <section>
+
+            <div class="ratio ratio-16x9 mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.4984030981996!2d-63.866918286708085!3d-32.03649723734886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd17bb581942e1%3A0xc6947169f6c477b7!2sIPEM%20304%20Juan%20Carlos%20Ferrero!5e1!3m2!1ses!2sar!4v1768146099722!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <!-- <div>
-            <h2>Formulario de Contacto</h2>
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Formulario de Contacto</h2>
 
-            <form action="">
-                <label for="nombre">Nombre y Apellido</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-
-                <label for="email">Correo Electrónico</label>
-                <input type="text" id="email" name="email" required><br><br>
-
-                <label for="motivo">Motivo de la Consulta</label><br><br>
-
-                <label for="">Inscripción</label>
-                <input type="radio" name="gender"><br><br>
-
-                <label for="">Información académica</label>
-                <input type="radio" name="gender"><br><br>
-
-                <label for="">Proyectos Institucionales</label>
-                <input type="radio" name="gender"><br><br>
-
-                <label for="mensaje">Mensajes</label><br><br>
-                <textarea name="mensaje" id="mensaje" rows="5"></textarea><br><br>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </div> -->
-
-        <h2>Formulario de Contacto</h2>
-
-        <form class="formulario-contacto">
-            <section class="container my-5">
+            <form class="formulario-contacto p-4 rounded">
 
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre y Apellido</label>
@@ -122,29 +115,41 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-label" id="email" placeholder="correo@ejemplo.com"></label>
+                    <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="form-label"><strong>Motivo de la consulta</strong></label>
+                    <label class="form-label"><strong>Motivo de la consulta</strong></label>
 
-                    <div class="mb-3 form-check">
+                    <div class="form-check">
                         <input class="form-check-input" type="radio" name="motivo" id="motivo1">
-                        <label class="form-check-label" for="motivo1">Información Académica</label><br>
-
-                        <input class="form-check-input" type="radio" name="motivo" id="motivo2">
-                        <label class="form-check-label" for="motivo2">Proyectos Institucionales</label><br>
+                        <label class="form-check-label" for="motivo1">
+                            Información Académica
+                        </label>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje</label><textarea class="form-control"
-                            id="mensaje" rows="4" placeholder="Escriba aquí su consulta" required></textarea>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="motivo" id="motivo2">
+                        <label class="form-check-label" for="motivo2">
+                            Proyectos Institucionales
+                        </label>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </section>
-        </form>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escriba aquí su consulta"
+                        required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-4">
+                        Enviar
+                    </button>
+                </div>
+
+            </form>
+        </section>
 
         <section>
             <p>
@@ -156,42 +161,51 @@
 
     </main>
 
-    <footer>
-        <div class="footer-container">
+    <footer class="bg-primary text-light py-3 mt-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
 
-            <div class="footer-info">
-                <img src="../img/logo1.jpeg" alt="Logo del colegio">
-                <p>© 2025 IPEM N° 304 Juan Carlos Ferrero. Formando estudiantes para el presente y el futuro.</p><br>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <img src="../img/logo1.jpeg" class="img-fluid rounded-circle mb-2" style="width: 70px;">
+                    <p class="small mb-0">© 2025 IPEM N° 304</p>
+                    <p class="small mb-0">Web: Belén Vilches</p>
+                </div>
 
-                <p>Web hecha por Belén Vilches</p>
+                <div class="col-md-3 small">
+                    <h6>Horarios</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>Lunes a viernes</li>
+                        <li>13:00 a 19:00 hs</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 small">
+                    <h6>Redes</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>X</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 small">
+                    <h6>Contacto</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>ipem304@me.cba.gov.ar</li>
+                        <li>3572 – 494956</li>
+                    </ul>
+                </div>
+
             </div>
+        </div>
+        </div>
 
-            <div>
-                <h3>Horarios de Atención</h3>
-                <ul>
-                    <li><strong>Lunes a viernes:</strong> 13:00 a 19:00 hs</li>
-                    <li>Secretaría llamar por la mañana</li>
-                </ul>
-            </div>
+        <hr class="border-light">
 
-            <div>
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><strong>Facebook</strong></li>
-                    <li><strong>Instagram</strong></li>
-                    <li><strong>X</strong></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Contactanos</h3>
-                <ul>
-                    <li><strong>Mail:</strong> ipem304@me.cba.gov.ar</li>
-                    <li><strong>Tel fjjo:</strong> 3572 - 494956</li>
-                    <li><strong>Celular: </strong> 3571 - 697071</li>
-                    <li><strong>Dirección:</strong> Juan Bautista Alberdi S/N</li>
-                </ul>
-            </div>
+        <p class="text-center small mb-0 pb-3">
+            Educación pública que transforma 💙
+        </p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

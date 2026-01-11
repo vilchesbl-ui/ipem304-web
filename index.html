@@ -7,23 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPEM 304 JUAN CARLOS FERRERO</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
+    <header class="text-center py-3">
         <img src="img/logo1.jpeg" class="logo">
-
         <h1>IPEM N° 304 - JUAN CARLOS FERRERO</h1>
-
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="pages/quienes_somos.html">¿QUIÉNES SOMOS?</a>
-            <a href="pages/especialidad.html">ESPECIALIDAD</a>
-            <a href="pages/proyectos.html">PROYECTOS</a>
-            <a href="pages/contactos.html">CONTACTOS</a>
-        </nav>
     </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand d-lg-none" href="#">IPEM 304</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarIPEM">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarIPEM">
+                <ul class="navbar-nav gap-lg-4 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/quienes_somos.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/especialidad.html">Especialidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contactos.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
 
     <main>
         <section>
@@ -85,58 +111,67 @@
             </div>
         </section>
 
-        <!-- google maps, con esto le pedí ayuda a la IA porque me tiraba error el link-->
-        <section>
-            <h2>Nuestra Ubicación</h2>
+        <section class="container my-4">
+            <h2 class="text-center">Nuestra Ubicación</h2>
 
-            <div class="ubicacion"> <!--código para ver el mapaA-->
+            <div class="ratio ratio-16x9 mapa">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.804540672849!2d-63.86656432573512!3d-32.03599842647556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd17bb581942e1%3A0xc6947169f6c477b7!2sIPEM%20304%20Juan%20Carlos%20Ferrero!5e1!3m2!1ses!2sar!4v1763871779212!5m2!1ses!2sar"
-                    width="600" height="450" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.4984030981996!2d-63.866918286708085!3d-32.03649723734886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd17bb581942e1%3A0xc6947169f6c477b7!2sIPEM%20304%20Juan%20Carlos%20Ferrero!5e1!3m2!1ses!2sar!4v1768146099722!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-container">
+    <footer class="bg-primary text-light py-3 mt-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
 
-            <div class="footer-info">
-                <img src="./img/logo1.jpeg" alt="Logo del colegio">
-                <p>© 2025 IPEM N° 304 Juan Carlos Ferrero. Formando estudiantes para el presente y el futuro.</p><br>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <img src="./img/logo1.jpeg" class="img-fluid rounded-circle mb-2" style="width: 70px;">
+                    <p class="small mb-0">© 2025 IPEM N° 304</p>
+                    <p class="small mb-0">Web: Belén Vilches</p>
+                </div>
 
-                <p>Web hecha por Belén Vilches</p>
+                <div class="col-md-3 small">
+                    <h6>Horarios</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>Lunes a viernes</li>
+                        <li>13:00 a 19:00 hs</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 small">
+                    <h6>Redes</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>X</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 small">
+                    <h6>Contacto</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>ipem304@me.cba.gov.ar</li>
+                        <li>3572 – 494956</li>
+                    </ul>
+                </div>
+
             </div>
+        </div>
+        </div>
 
-            <div>
-                <h3>Horarios de Atención</h3>
-                <ul>
-                    <li><strong>Lunes a viernes:</strong> 13:00 a 19:00 hs</li>
-                    <li>Secretaría llamar por la mañana</li>
-                </ul>
-            </div>
+        <hr class="border-light">
 
-            <div>
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><strong>Facebook</strong></li>
-                    <li><strong>Instagram</strong></li>
-                    <li><strong>X</strong></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Contactanos</h3>
-                <ul>
-                    <li><strong>Mail:</strong> ipem304@me.cba.gov.ar</li>
-                    <li><strong>Tel fjjo:</strong> 3572 - 494956</li>
-                    <li><strong>Celular: </strong> 3571 - 697071</li>
-                    <li><strong>Dirección:</strong> Juan Bautista Alberdi S/N</li>
-                </ul>
-            </div>
+        <p class="text-center small mb-0 pb-3">
+            Educación pública que transforma 💙
+        </p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

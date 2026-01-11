@@ -13,13 +13,23 @@ body{
 /* -------- Header ---------- */
 header{
     display: flex;
-    background-color:cornflowerblue;
+    background-color:rgb(100, 149, 237);
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
-    position: sticky;
-    top: 0px;
     z-index: 100;
+}
+
+.navbar{
+    font-size: 15px;
+}
+
+.navbar .nav-link{
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover{
+    text-decoration: underline;
 }
 
 header img{
@@ -34,35 +44,6 @@ header h1{
     color: black;
     font-size: 22px;
     margin-bottom: 1px;
-}
-
-nav{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-nav a{
-    display: flex;
-    font-size: 14px;
-    text-decoration: none;
-    color: var(--color-accent);
-    background-color: rgb(255, 196, 108);
-    padding: 10px;
-    border-radius: 7px;
-    color:rgb(0, 43, 237);
-    margin-bottom: 1px;
-}
-
-nav a:hover{
-    background-color: rgb(246, 248, 251);
-    color: black;
-    box-shadow: 1px 1px 5px black;
-}
-
-nav a:active{
-    background-color: rgb(8, 4, 245);
 }
 
 h2{
@@ -97,7 +78,6 @@ p{
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    /* margin-bottom: 30px; */
 }
 
 .galeria img{
@@ -110,12 +90,6 @@ p{
 .img-galeria{
     display: flex;
     justify-content: center;
-}
-
-.ubicacion{
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
 }
 
 .proyecto{
@@ -133,13 +107,14 @@ p{
     margin-bottom: 10px;
 }
 
-/* .nav-colorfondo{
-    background-color: rgba(8, 169, 244, 0.23);
-    text-align: center;
-} */
+.mapa{
+    max-width: 600px;
+    margin: auto;
+}
+
 .formulario-contacto {
     background-color: #e6f0ff;
-    color: #003366;           
+    color: #664d00;           
 }
 
 .form-label{
@@ -153,28 +128,6 @@ p{
     color: white;
 }
 
-/*---------- Footer ------------*/
-footer{
-    background-color: rgb(123, 161, 244); 
-    color: #ffffff; 
-    padding: 10px 10px; 
-}
-
-.footer-container{
-    display: flex; 
-    justify-content: space-between;
-    /* align-items: center; */
-    align-items: flex-start;
-    padding: 20px;
-    gap: 20px;
-}
-
-.footer-info img{
-    width: 100px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-}
-
 div ul{
     color: rgb(39, 38, 38);
 }
@@ -185,16 +138,5 @@ div ul{
     header{
         flex-direction: column;
         align-items: center; 
-}
-
-    nav{
-        flex-direction: column;
-        gap: 5px;
-}
-
-.footer-container{
-    flex-direction: column;
-    align-items: center;
-    text-align:center;
 }
 }
